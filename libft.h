@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/04 03:40:40 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/04 19:00:13 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,42 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+
+//function converts the initial portion of the string
+//pointed to by nptr to int.  The behavior is the same as
 int		ft_atoi(const char *nptr);
 
+//function erases the data in the n bytes of the memory
+//starting at the location pointed to by s, by writing zeros (bytes
+//containing '\0') to that area.
 void	ft_bzero(void *b, size_t len);
 
+//The calloc() function allocates memory for an array of nmemb
+//elements of size bytes each and returns a pointer to the allocated 
+//memory. The memory is set to zero. If nmemb or size is 0, then
+//calloc() returns either NULL, or a unique pointer value 
+//that can later be successfully passed to free(). 
 void	*ft_calloc(size_t nitems, size_t size);
 
+//checks for an alphanumeric characte
 int		ft_isalnum(int c);
 
+//checks for an alphabetic character
 int		ft_isalpha(int value);
 
+//checks whether c is a 7-bit unsigned char value that fits.
+//into the ASCII character set. 
 int		ft_isascii(int c);
 
+//checks for a digit (0 through 9).
 int		ft_isdigit(int c);
 
+//checks for any printable character including space. 
 int		ft_isprint(int c);
 
 //Allocates (with malloc(3)) and returns a string
 //representing the integer received as an argument.
-//Negative numbers must be handled
+//Negative numbers must be handled.
 char	*ft_itoa(int n);
 
 //Adds the node ’new’ at the end of the list.
@@ -91,14 +108,30 @@ t_list	*ft_lstnew(void *content);
 //Counts the number of nodes in a list.
 int		ft_lstsize(t_list *lst);
 
+//The memchr() function scans the initial n bytes of the memory
+//area pointed to by s for the first instance of c.  Both c and the
+//bytes of the memory area pointed to by s are interpreted as
+//unsigned char.
 void	*ft_memchr(const void *str, int c, size_t n);
 
+//The memcmp() function compares the first n bytes (each
+//interpreted as unsigned char) of the memory areas s1 and s2.
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 
+//The memcpy() function copies n bytes from memory area src to
+//memory area dest.  The memory areas must not overlap.  Use
+//memmove(3) if the memory areas do overlap.
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 
+// The memmove() function copies n bytes from memory area src to
+//memory area dest.  The memory areas may overlap: copying takes
+//place as though the bytes in src are first copied into a
+//temporary array that does not overlap src or dest, and the bytes
+//are then copied from the temporary array to dest.
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
+//The memset() function fills the first n bytes of the memory area
+//pointed to by s with the constant byte c.
 void	*ft_memset(void *str, int c, size_t n);
 
 //Outputs the character ’c’ to the given file
@@ -123,8 +156,13 @@ void	ft_putstr_fd(char *s, int fd);
 //with a NULL pointer.
 char	**ft_split(char const *s, char c);
 
+//The strchr() function returns a pointer to the first occurrence
+//of the character c in the string s.
 char	*ft_strchr(const char *str, int c);
 
+//The strdup() function returns a pointer to a new string which is
+//a duplicate of the string s.  Memory for the new string is
+//obtained with malloc(3), and can be freed with free(3).
 char	*ft_strdup(const char *s);
 
 //Applies the function ’f’ on each character of
@@ -138,10 +176,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //of ’s1’ and ’s2’.
 char	*ft_strjoin(char const *s1, char const *s2);
 
+//A strlcat () anexa a string src ao final de dst. 
+//Ele anexará no máximo tamanho - strlen(dst) - 1 
+//bytes,terminando com NUL o resultado. 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
+//A strlcpy () copia até tamanho - 1 caracteres da string terminada
+//em NUL src para dst , terminando com NUL o resultado. 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
+//The strlen() function calculates the length of the string pointed
+//to by s, excluding the terminating null byte ('\0').
 size_t	ft_strlen(const char *s);
 
 //Applies the function ’f’ to each character of the
@@ -150,10 +195,20 @@ size_t	ft_strlen(const char *s);
 //from successive applications of ’f’.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
+//The strcmp() function compares the two strings s1 and s2.  The
+//locale is not taken into account (for a locale-aware comparison,
+//see strcoll(3)).  The comparison is done using unsigned
+//characters.
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
+//The strnstr() function locates the	first occurrence of the	
+//null-termi-nated string little in the	string big, where not 
+//more than	len characters are searched.  Characters that appear
+//after a `\0'	character are not searched.	
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 
+//The strrchr() function returns a pointer to the last occurrence
+//of the character c in the string s. 
 char	*ft_strrchr(const char *str, int c);
 
 //Allocates (with malloc(3)) and returns a copy of
@@ -167,8 +222,14 @@ char	*ft_strtrim(char const *s1, char const *set);
 //maximum size ’len’.
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
+//Se c for uma letra maiúscula, tolower () retornará sua minúscula 
+//equivalente, se existir uma representação em minúsculas no 
+//localidade. Caso contrário, retorna c .
 int		ft_tolower(int c);
 
+//Se c for uma letra minúscula, toupper () retorna sua letra maiúscula 
+//equivalente, se existir uma representação em maiúsculas no 
+//localidade. Caso contrário, retorna c .
 int		ft_toupper(int c);
 
 #endif
