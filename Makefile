@@ -6,11 +6,11 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/06/03 20:31:46 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/06/04 04:04:56 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c  \
+SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 				ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 				ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c    \
 				ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c        \
@@ -42,8 +42,7 @@ $(NAME):	$(OBJS_SRCS) $(INCLUDES)
 
 all:		$(NAME)
 
-
-bonus: 		$(NAME)	$(OBJS_BONUS)
+bonus:		$(NAME) $(OBJS_BONUS)
 				ar -rcs $(NAME) $^
 
 clean:

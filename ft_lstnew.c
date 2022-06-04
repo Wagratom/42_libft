@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 21:03:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/03 14:53:39 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/04 03:36:11 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-
-/*
-int main()
-{
-	void	*str;
-	t_list	*result;
-
-	str = ft_strdup("wallas");
-	result = ft_lstnew(str);
-	printf("result %s\n", (char *)result->content);
-} */

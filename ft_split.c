@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bankai <bankai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:46:58 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/05/31 20:48:03 by bankai           ###   ########.fr       */
+/*   Updated: 2022/06/04 03:08:20 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static const char	*size_add(const char *str, char sep, int *size)
 
 	if (!*str)
 		return (NULL);
-	i = -1;
 	*size = 0;
+	i = -1;
 	while (*str == sep)
 		str++;
 	while (str[++i] != sep && str[i])
@@ -91,7 +91,6 @@ char	**ft_split(char const *s, char c)
 	int		s_mat;
 
 	s_mat = size_mat(s, c) + 1;
-	printf("size %d\n", s_mat);
 	mat = (char **)malloc(sizeof(char *) * s_mat);
 	if (mat == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:01:02 by bankai            #+#    #+#             */
-/*   Updated: 2022/06/03 18:33:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/04 18:03:08 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -646,12 +646,78 @@ int main()
 }*/
 
 //mains para as fd
-
 /* int main()
 {
 	int fd;
 
 	fd = open("testeeeeeeee", O_WRONLY);
 	ft_putstr_fd("wagratom wallas ferreira santos", fd);
+} */
+
+//						ft_lstadd_back
+/* 
+int main()
+{
+	t_list	*pont1 = ft_lstnew("wagratom");
+	t_list	*pont2 = ft_lstnew("wallas");
+	t_list	*pont3 = ft_lstnew("ferreira");
+
+	t_list	*init;
+	
+	ft_lstadd_front(&pont1, pont2);
+	
+	init = pont1;
+	while (init)
+	{
+		printf("point1 = %s\n", (char*)init->content);
+		init = init->next;
+	}
+	//expected wallas wagratom 
+	printf("\n");
+	init = pont1;
+	ft_lstadd_back(&pont1, pont3);
+   	while (init)
+	{
+		printf("point1 = %s\n", (char*)init->content);
+		init = init->next;
+	}
+	//expexted wallas \n wagratom \n ferreira
+}*/
+
+//					ft_lstadd_front
+
+/* 
+t_list	*creat_no(char *s, t_list *pont)
+{
+	t_list	*new  = malloc(sizeof(t_list));
+
+	new->content = s;
+	if (pont)
+		new->next = pont;
+	return (new);
 }
- */
+/*
+int main(void)
+{
+	t_list	*firts = creat_no("santos", NULL);
+	t_list	*second =creat_no("ferreira", firts);
+	t_list	*thiard =creat_no("wallas", second);
+
+	t_list	*pont;	
+
+	t_list	*iterador = thiard;
+	while (iterador)
+	{
+		printf("value: %s\n", (char *)iterador->content);
+		iterador = iterador->next;
+	}
+	iterador = thiard;
+	printf("\nnova lista de cadeia\n\n");
+	pont =	ft_lstnew("wagratom");
+	ft_lstadd_front(&iterador, pont);
+	while (iterador)
+	{
+		printf("value: %s\n",	(char *)iterador->content);
+		iterador = iterador->next;
+	}
+}*/

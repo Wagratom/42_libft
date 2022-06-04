@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:55 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/03 21:00:06 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/04 03:41:44 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	end_str(char *copy, char const *set, int size)
+static int	end_str(char const *copy, char const *set, int size)
 {
 	int		count;
 	int		flag;
@@ -40,7 +40,7 @@ int	end_str(char *copy, char const *set, int size)
 	return (count);
 }
 
-char	*start_check(char const *s1, char const *set)
+static char	const	*start_check(char const *s1, char const *set)
 {
 	size_t	i;
 	int		flag;
@@ -59,26 +59,18 @@ char	*start_check(char const *s1, char const *set)
 			break ;
 		s1++;
 	}
-	return (ft_strdup(s1));
+	return (s1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*copy1;
-	int		s_copy1;
-	char	*copy2;
+	char	*result;
 	int		del;
 
-	copy1 = start_check(s1, set);
-	if (copy1 == NULL)
+	s1 = start_check(s1, set);
+	del = end_str(s1, set, ft_strlen(s1));
+	result = ft_substr(s1, 0, (ft_strlen(s1) - del));
+	if (!result)
 		return (NULL);
-	s_copy1 = ft_strlen(copy1);
-	del = end_str(copy1, set, s_copy1);
-	s_copy1 -= del;
-	ft_bzero(&copy1[s_copy1], del);
-	copy2 = ft_strdup(copy1);
-	if (copy2 == NULL)
-		return (NULL);
-	free(copy1);
-	return (copy2);
+	return (result);
 }
