@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/04 19:00:13 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/04 19:45:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 //function converts the initial portion of the string
 //pointed to by nptr to int.  The behavior is the same as

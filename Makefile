@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/06/04 04:04:56 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/06/04 19:48:24 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(NAME):	$(OBJS_SRCS) $(INCLUDES)
 all:		$(NAME)
 
 bonus:		$(NAME) $(OBJS_BONUS)
-				ar -rcs $(NAME) $^
+				ar -rcs $^
 
 clean:
 			$(RM) $(OBJS_SRCS) 
@@ -54,4 +54,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONEY: all clean fclean re
+.PHONEY: .c.o all bonus clean fclean re
