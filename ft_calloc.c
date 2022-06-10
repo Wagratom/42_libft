@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:17:19 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/03 21:57:29 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:19:31 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 	int		result;
 
 	if (!nitems || !size)
-		return (malloc(0));
+		return (NULL);
 	result = nitems * size;
 	if ((result / nitems) != size)
 		return (NULL);
