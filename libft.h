@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/06 20:45:08 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/06/16 21:42:21 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,14 +220,14 @@ char	*ft_strtrim(char const *s1, char const *set);
 //maximum size ’len’.
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-//Se c for uma letra maiúscula, tolower () retornará sua minúscula 
-//equivalente, se existir uma representação em minúsculas no 
-//localidade. Caso contrário, retorna c .
+//If c is an uppercase letter, tolower() returns its lowercase
+//equivalent, if a lowercase representation exists in the current
+//locale.  Otherwise, it returns c. 
 int		ft_tolower(int c);
 
-//Se c for uma letra minúscula, toupper () retorna sua letra maiúscula 
-//equivalente, se existir uma representação em maiúsculas no 
-//localidade. Caso contrário, retorna c .
+//If c is a lowercase letter, toupper() returns its uppercase
+//equivalent, if an uppercase representation exists in the current
+//locale.  Otherwise, it returns c.
 int		ft_toupper(int c);
 
 #endif
