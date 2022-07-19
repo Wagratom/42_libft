@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/16 21:42:21 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/07/19 22:49:45 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
+
+# define BUFFER_SIZE 4096
+# define FD_MAX 1024
 
 typedef struct s_list
 {
@@ -229,5 +232,17 @@ int		ft_tolower(int c);
 //equivalent, if an uppercase representation exists in the current
 //locale.  Otherwise, it returns c.
 int		ft_toupper(int c);
+
+
+
+//*************************************************************
+//						new functions						  *
+//*************************************************************
+
+//give free in the pointers passed as a parameter
+char	*free_ptr(char **bloco1, char **bloco2);
+
+//read a file line by line
+char	*get_next_line(int fd);
 
 #endif
