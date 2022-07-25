@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/07/19 22:49:45 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/07/25 18:40:14 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,5 +244,8 @@ char	*free_ptr(char **bloco1, char **bloco2);
 
 //read a file line by line
 char	*get_next_line(int fd);
+
+//count the number of houses in a number
+int		numb_house(unsigned long int nbr, int base);
 
 #endif
