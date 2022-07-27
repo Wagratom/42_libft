@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:40:14 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:51:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,8 +232,6 @@ int		ft_tolower(int c);
 //equivalent, if an uppercase representation exists in the current
 //locale.  Otherwise, it returns c.
 int		ft_toupper(int c);
-
-
 
 //*************************************************************
 //						new functions						  *
