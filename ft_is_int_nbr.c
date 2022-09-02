@@ -6,25 +6,18 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 15:56:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/02 15:58:12 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:26:31 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_not_nbr(char *nbr)
+int	ft_is_int_nbr(char *nbr)
 {
-	int	digit;
-	int	failure;
+	char	*conversion;
 
-	failure = 0;
-	if (nbr[0] == '-')
-		nbr++;
-	digit = -1;
-	while (nbr[++digit])
-	{
-		if (!ft_isdigit(nbr[digit]))
-			failure = 1;
-	}
-	return (failure);
+	conversion = ft_itoa(ft_atoi(nbr));
+	if (ft_strncmp(conversion, nbr, ft_strlen(nbr) + 1))
+		return (1);
+	return (0);
 }

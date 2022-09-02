@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/02 15:57:52 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:27:14 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,7 +246,7 @@ char	*get_next_line(int fd);
 //count the number of houses in a number
 int		numb_house(unsigned long int nbr, int base);
 
-//checks if a string is a number
-int		ft_is_not_nbr(char *nbr);
+//checks if a string is a number int
+int		ft_is_int_nbr(char *nbr);
 
 #endif
