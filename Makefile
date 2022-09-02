@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/07/25 18:40:32 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/02 15:56:51 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c 
 				ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c        \
 				ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c        \
 				ft_substr.c ft_tolower.c ft_toupper.c get_next_line.c free_ptr.c        \
-				numb_house.c
+				numb_house.c ft_is_not_nbr.c
+
 
 OBJS_SRCS 	=	$(SRCS:.c=.o)
 
