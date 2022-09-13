@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/02 16:25:59 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/13 16:40:18 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,40 +20,42 @@ SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c 
 				numb_house.c ft_is_int_nbr.c
 
 
-OBJS_SRCS 	=	$(SRCS:.c=.o)
-
 BONUS 		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c\
                 ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
-OBJS_BONUS	=	$(BONUS:.c=.o)
+OBJS	 	=	$(patsubst %.c, objects/%.o, $(SRCS))
+OBJS_BONUS	=	$(patsubst %.c, objects/%.o, $(BONUS))
+OBJS_DIR	=	objects
 
 INCLUDES 	=	libft.h
 
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 
-RM			= 	rm -f
+RM			= 	rm -rf
 
 NAME 		=	libft.a
 
-.c.o:
-			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+$(OBJS_DIR)/%.o:	%.c
+			$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME):	$(OBJS_SRCS) $(INCLUDES)
-				ar -rcs $@ $^
+$(NAME):	$(OBJS_DIR) $(OBJS) $(INCLUDES)
+				ar -rcs $@ $(OBJS)
 
 all:		$(NAME)
 
 bonus:		$(NAME) $(OBJS_BONUS)
 				ar -rcs $^
 
-clean:
-			$(RM) $(OBJS_SRCS) 
-			$(RM) $(OBJS_BONUS) 
+$(OBJS_DIR):
+				mkdir -p $@
 
-fclean: clean
+clean:
+			$(RM) $(OBJS_DIR)
+
+fclean:		 clean
 			$(RM) $(NAME)
 
-re: fclean all
+re: 		fclean all
 
-.PHONEY: .c.o all bonus clean fclean re
+.PHONEY:	all bonus clean fclean re
