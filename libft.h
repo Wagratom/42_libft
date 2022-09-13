@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/02 16:27:14 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/13 18:10:11 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int		ft_atoi(const char *nptr);
 void	ft_bzero(void *b, size_t len);
 
 //The calloc() function allocates memory for an array of nmemb
-//elements of size bytes each and returns a pointer to the allocated 
+//elements of size bytes each and returns a pointer to the allocated
 //memory. The memory is set to zero. If nmemb or size is 0, then
-//calloc() returns either NULL, or a unique pointer value 
-//that can later be successfully passed to free(). 
+//calloc() returns either NULL, or a unique pointer value
+//that can later be successfully passed to free().
 void	*ft_calloc(size_t nitems, size_t size);
 
 //checks for an alphanumeric characte
@@ -50,13 +50,13 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int value);
 
 //checks whether c is a 7-bit unsigned char value that fits.
-//into the ASCII character set. 
+//into the ASCII character set.
 int		ft_isascii(int c);
 
 //checks for a digit (0 through 9).
 int		ft_isdigit(int c);
 
-//checks for any printable character including space. 
+//checks for any printable character including space.
 int		ft_isprint(int c);
 
 //Allocates (with malloc(3)) and returns a string
@@ -109,6 +109,10 @@ t_list	*ft_lstnew(void *content);
 //Counts the number of nodes in a list.
 int		ft_lstsize(t_list *lst);
 
+//*************************************************************
+//							memory							  *
+//*************************************************************
+
 //The memchr() function scans the initial n bytes of the memory
 //area pointed to by s for the first instance of c.  Both c and the
 //bytes of the memory area pointed to by s are interpreted as
@@ -134,6 +138,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 //The memset() function fills the first n bytes of the memory area
 //pointed to by s with the constant byte c.
 void	*ft_memset(void *str, int c, size_t n);
+
+
+//*************************************************************
+//							print							  *
+//*************************************************************
 
 //Outputs the character ’c’ to the given file
 //descriptor
@@ -177,13 +186,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //of ’s1’ and ’s2’.
 char	*ft_strjoin(char const *s1, char const *s2);
 
-//A strlcat () anexa a string src ao final de dst. 
-//Ele anexará no máximo tamanho - strlen(dst) - 1 
-//bytes,terminando com NUL o resultado. 
+//A strlcat () anexa a string src ao final de dst.
+//Ele anexará no máximo tamanho - strlen(dst) - 1
+//bytes,terminando com NUL o resultado.
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 //A strlcpy () copia até tamanho - 1 caracteres da string terminada
-//em NUL src para dst , terminando com NUL o resultado. 
+//em NUL src para dst , terminando com NUL o resultado.
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 //The strlen() function calculates the length of the string pointed
@@ -202,14 +211,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //characters.
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-//The strnstr() function locates the	first occurrence of the	
-//null-termi-nated string little in the	string big, where not 
+//The strnstr() function locates the	first occurrence of the
+//null-termi-nated string little in the	string big, where not
 //more than	len characters are searched.  Characters that appear
-//after a `\0'	character are not searched.	
+//after a `\0'	character are not searched.
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 
 //The strrchr() function returns a pointer to the last occurrence
-//of the character c in the string s. 
+//of the character c in the string s.
 char	*ft_strrchr(const char *str, int c);
 
 //Allocates (with malloc(3)) and returns a copy of
@@ -225,7 +234,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 //If c is an uppercase letter, tolower() returns its lowercase
 //equivalent, if a lowercase representation exists in the current
-//locale.  Otherwise, it returns c. 
+//locale.  Otherwise, it returns c.
 int		ft_tolower(int c);
 
 //If c is a lowercase letter, toupper() returns its uppercase
