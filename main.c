@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_len.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 18:33:02 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/13 18:35:13 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/13 18:12:00 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/13 19:43:38 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_array_len(char	**array)
+int main()
 {
-	int		len;
+	char	**array = (char *[]){"teste","teste1", NULL};
+	char	**teste;
 
-	len = -1;
-	if (array == NULL || *array == NULL)
-		return (len);
-	while(array[++len])
-		;
-	return (len);
+	teste = ft_array_dup(array);
+	while(*teste)
+	{
+		printf("teste = %s\n", *teste);
+		teste++;
+	}
+	return (0);
 }

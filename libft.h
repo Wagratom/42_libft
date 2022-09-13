@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/13 18:10:11 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/13 19:24:01 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,5 +257,11 @@ int		numb_house(unsigned long int nbr, int base);
 
 //checks if a string is a number int
 int		ft_is_int_nbr(char *nbr);
+
+
+
+char	**ft_array_dup(char **array);
+
+int		ft_array_len(char	**array);
 
 #endif
