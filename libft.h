@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 18:40:24 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 19:30:15 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,24 +251,28 @@ int		ft_toupper(int c);
 //						new functions						  *
 //*************************************************************
 
-//give free in the pointers passed as a parameter
+//Give free in the pointers passed as a parameter
 char	*free_ptr(char **bloco1, char **bloco2);
 
 //read a file line by line
 char	*get_next_line(int fd);
 
-//count the number of houses in a number
+//Count the number of houses in a number
 int		numb_house(unsigned long int nbr, int base);
 
-//checks if a string is a number int
+//Checks if a string is a number int
 t_bool	ft_is_int_nbr(char *nbr);
 
+//Returns true if all array arguments are of type integer
 t_bool	ft_is_array_int(char	**array);
 
+//Retorna tha copy of a array
 char	**ft_array_dup(char **array);
 
+//Compare 2 string and return true if they are equal
 t_bool	ft_str_eq(char *str1, char *str2);
 
+//Returns the size of an array
 int		ft_array_len(char	**array);
 
 #endif
