@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 18:33:32 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 18:40:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,6 +266,8 @@ t_bool	ft_is_int_nbr(char *nbr);
 t_bool	ft_is_array_int(char	**array);
 
 char	**ft_array_dup(char **array);
+
+t_bool	ft_str_eq(char *str1, char *str2);
 
 int		ft_array_len(char	**array);
 
