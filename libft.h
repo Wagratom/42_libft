@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/13 19:24:01 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 11:57:16 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef enum s_bool
+{
+	FALSE,
+	TRUE,
+}			t_bool;
 
 //function converts the initial portion of the string
 //pointed to by nptr to int.  The behavior is the same as
