@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 15:56:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 22:50:05 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 23:05:38 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,10 @@ static char	*convert_number(char **nbr)
 t_bool	ft_is_int_nbr(char *nbr)
 {
 	char	*nbr_conv;
-	t_bool	failure;
 
-	failure = TRUE;
 	nbr_conv = convert_number(&nbr);
 	if (ft_str_eq(nbr_conv, nbr) == FALSE)
-		failure = FALSE;
+		return (FALSE);
 	free(nbr_conv);
-	return (failure);
+	return (TRUE);
 }

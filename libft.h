@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 23:00:11 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:10:47 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ int		ft_isprint(int c);
 //representing the integer received as an argument.
 //Negative numbers must be handled.
 char	*ft_itoa(int n);
+
+//*************************************************************
+//							Linked list						  *
+//*************************************************************
 
 //Adds the node ’new’ at the end of the list.
 void	ft_lstadd_back(t_list **lst, t_list *new);
