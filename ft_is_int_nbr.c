@@ -6,30 +6,32 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 15:56:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 18:30:53 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 22:45:02 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-// static t_bool filter_nbr(char **nbr)
-// {
-// 	if (nbr == NULL)
-// 		return (FALSE);
-// 	if(*nbr == '+')
-// 		**nbr++;
-// 	return (TRUE);
-// }
+static char	*convert_number(char **nbr)
+{
+	if (nbr == NULL || *nbr == NULL)
+		return (NULL);
+	if(*nbr[0] == '+')
+		(*nbr) = (*nbr + 1);
+	return (ft_itoa(ft_atoi(*nbr)));
+}
 
 t_bool	ft_is_int_nbr(char *nbr)
 {
-	char	*conversion;
+	char	*nbr_conv;
 	t_bool	failure;
 
 	failure = TRUE;
-	conversion = ft_itoa(ft_atoi(nbr));
-	if (ft_strncmp(conversion, nbr, ft_strlen(nbr) + 1))
+	nbr_conv = convert_number(&nbr);
+	printf("nbr_conv %s\n", nbr_conv);
+	if (ft_str_eq(nbr_conv, nbr) == FALSE)
 		failure = FALSE;
-	free(conversion);
+	free(nbr_conv);
 	return (failure);
 }
