@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:38:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 18:32:51 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:24:25 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	**ft_array_dup(char **array)
 	cpy = (char **)malloc(len * sizeof(char *));
 	cpy[--len] = NULL;
 	while (len--)
-		cpy[len] = array[len];
+		cpy[len] = ft_strdup(array[len]);
 	return (cpy);
 }
