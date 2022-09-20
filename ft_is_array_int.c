@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <libft.h>
+#include <libft.h>
 
 t_bool	ft_is_array_int(char	**array)
 {
@@ -18,7 +18,7 @@ t_bool	ft_is_array_int(char	**array)
 		return (FALSE);
 	while (*array)
 	{
-		if(ft_is_int_nbr(*array) == FALSE)
+		if (ft_is_int_nbr(*array) == FALSE)
 			return (FALSE);
 		array++;
 	}
