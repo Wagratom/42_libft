@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   alloc_or_die.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 16:17:19 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/24 10:26:25 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/24 09:39:42 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/24 10:26:04 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+void	*alloc_or_die(size_t itens, size_t size)
 {
-	void	*rtn;
-	int		result;
+	void	*ptr;
 
-	if (!nitems || !size)
-		return (NULL);
-	result = nitems * size;
-	if ((result / nitems) != size)
-		return (NULL);
-	rtn = alloc_or_die(nitems, size);
-	if (!rtn)
-		return (NULL);
-	ft_memset(rtn, 0, nitems * size);
-	return (rtn);
+	ptr = malloc(itens * size);
+	if (ptr != NULL)
+		return(ptr);
+	write(2, "Erro em alocar memória\n", 23);
+	exit(1);
 }
