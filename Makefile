@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/24 10:25:24 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/22 09:03:17 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c      \
 			ft_is_int_nbr.c ft_array_len.c ft_array_dup.c ft_lstadd_back.c  \
 			ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c     \
             ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_str_eq.c   \
-			ft_is_array_int.c alloc_or_die.c
+			ft_is_array_int.c alloc_or_die.c ft_putstr_err.c
 
 OBJS	 	=	$(patsubst %.c, objects/%.o, $(SRCS))
 OBJS_DIR	=	objects
