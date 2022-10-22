@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:17:19 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/24 10:26:25 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 19:05:33 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 	result = nitems * size;
 	if ((result / nitems) != size)
 		return (NULL);
-	rtn = alloc_or_die(nitems, size);
-	if (!rtn)
-		return (NULL);
+	rtn = ft_alloc_or_die(nitems, size);
 	ft_memset(rtn, 0, nitems * size);
 	return (rtn);
 }

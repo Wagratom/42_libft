@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 09:17:15 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 19:05:33 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -280,7 +280,7 @@ t_bool	ft_str_eq(char *str1, char *str2);
 int		ft_array_len(char	**array);
 
 //Return an alloc pointer by malloc or kill the program on error
-void	*alloc_or_die(size_t itens, size_t size);
+void	*ft_alloc_or_die(size_t itens, size_t size);
 
 //write an error message to stderr
 void	ft_putstr_err(char	*messege);
