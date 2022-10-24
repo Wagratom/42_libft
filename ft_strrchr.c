@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/10 02:19:19 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:58:27 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strrchr(const char *str, int c)
 	unsigned char	*src;
 	size_t			size;
 
-	size = ft_strlen(str) + 1;
 	src = (unsigned char *)str;
+	size = ft_strlen(str) + 1;
 	while (size--)
 	{
 		if (src[size] == (unsigned char )c)

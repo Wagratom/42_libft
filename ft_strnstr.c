@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:25 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/02 21:22:48 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:08:32 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 		return ((char *)s1);
 	while (*s1 && size_s2 <= len--)
 	{
-		if (*s1 == *s2)
-		{
-			if (!ft_strncmp(s1, s2, size_s2))
-				return ((char *)s1);
-		}
+		if (*s1 == *s2 && !ft_strncmp(s1, s2, size_s2))
+			return ((char *)s1);
 		s1++;
 	}
 	return (NULL);
