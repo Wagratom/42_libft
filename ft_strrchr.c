@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 18:53:19 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:02:03 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*find_chr(unsigned char *src, unsigned char c, int end_str)
+char	*find_chr(unsigned char *src, unsigned char c, int end_str)
 {
 	while (src != NULL && end_str--)
 	{

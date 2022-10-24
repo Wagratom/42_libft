@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/24 17:29:00 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/24 19:03:23 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,5 +55,6 @@ fclean:		 clean
 re: 		fclean all
 
 norm:
-	norminette
+	@echo "\n					LIBFT" && norminette
+
 .PHONEY:	all bonus clean fclean re norm
