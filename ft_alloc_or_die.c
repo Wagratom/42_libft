@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   numb_house.c                                       :+:      :+:    :+:   */
+/*   ft_alloc_or_die.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 18:37:39 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/07/27 17:51:13 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/24 09:39:42 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/24 10:29:32 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	numb_house(unsigned long int nbr, int base)
+void	*ft_alloc_or_die(size_t itens, size_t size)
 {
-	if (nbr < (unsigned long int)base)
-		return (1);
-	return (numb_house(nbr / base, base) + 1);
+	void	*ptr;
+
+	ptr = malloc(itens * size);
+	if (ptr != NULL)
+		return (ptr);
+	write(2, "Erro em alocar memória\n", 23);
+	exit(EXIT_FAILURE);
 }

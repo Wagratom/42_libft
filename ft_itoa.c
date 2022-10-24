@@ -6,58 +6,59 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:18:53 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/06 21:11:25 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 10:30:20 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	n_houses(long int n, int flg)
-{
-	int	i;
-
-	i = 1;
-	while (n >= 10 && i++)
-		n /= 10;
-	if (flg)
-		i++;
-	return (i);
-}
-
-static char	*convert_numb(int n, int flag)
+static unsigned int	convert_positive(int nbr)
 {
 	unsigned int	aux;
-	int				size_n;
-	char			*result;
 
-	aux = n;
-	if (flag)
+	aux = nbr;
+	if (nbr < 0)
 		aux = -aux;
-	size_n = n_houses(aux, flag) + 1;
-	result = (char *) malloc(size_n);
-	if (result == NULL)
-		return (NULL);
-	result[--size_n] = '\0';
-	while (aux)
+	return (aux);
+}
+
+static char	*alloc_ptr(int size)
+{
+	char	*ptr;
+
+	ptr = (char *)ft_calloc((size + 1), 1);
+	ptr[size] = '\0';
+	return (ptr);
+}
+
+static char	*fill_ptr(char *ptr, unsigned int nbr, int size)
+{
+	while (nbr)
 	{
-		result[--size_n] = (aux % 10) + 48;
-		aux /= 10;
+		ptr[--size] = (nbr % 10) + 48;
+		nbr /= 10;
 	}
-	return (result);
+	return (ptr);
+}
+
+static char	*convert_numb(int nbr, int is_negative)
+{
+	unsigned int	aux;
+	int				numb_house;
+	char			*ptr;
+
+	aux = convert_positive(nbr);
+	numb_house = ft_numb_house(aux, 10) + is_negative;
+	ptr = alloc_ptr(numb_house);
+	ptr = fill_ptr(ptr, aux, numb_house);
+	if (is_negative)
+		ptr[0] = '-';
+	return (ptr);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		flag;
-
-	flag = n < 0;
-	result = convert_numb(n, flag);
-	if (result == NULL)
-		return (NULL);
 	if (n == 0)
-		result[0] = '0';
-	if (flag)
-		result[0] = '-';
-	return (result);
+		return (ft_strdup("0"));
+	return (convert_numb(n, (n < 0)));
 }
