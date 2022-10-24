@@ -6,23 +6,28 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 17:58:27 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:53:19 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char 	*find_chr(unsigned char *src, unsigned char c, int end_str)
 {
-	unsigned char	*src;
-	size_t			size;
-
-	src = (unsigned char *)str;
-	size = ft_strlen(str) + 1;
-	while (size--)
+	while (src != NULL && end_str--)
 	{
-		if (src[size] == (unsigned char )c)
-			return ((char *)&src[size]);
+		if (src[end_str] == c)
+			return ((char *)&src[end_str]);
 	}
 	return (NULL);
+}
+
+char	*ft_strrchr(const char *str, int c)
+{
+	char			*ptr;
+	size_t			len;
+
+	len = ft_strlen(str) + 1;
+	ptr = find_chr((unsigned char *)str, (unsigned char )c, len);
+	return (ptr);
 }
