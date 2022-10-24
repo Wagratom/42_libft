@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/30 00:50:04 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/24 10:30:54 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/24 17:29:00 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c      \
 			ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c   \
 			ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c \
 			ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
-			ft_toupper.c ft_get_next_line.c free_ptr.c ft_numb_house.c         \
+			ft_toupper.c ft_get_next_line.c ft_free_ptr.c ft_numb_house.c   \
 			ft_is_int_nbr.c ft_array_len.c ft_array_dup.c ft_lstadd_back.c  \
 			ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c     \
 			ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_str_eq.c   \

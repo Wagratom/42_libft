@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 23:44:05 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/07/19 22:43:55 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:28:28 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*find_line(char	**str)
 	temp = (*str);
 	line = ft_substr(temp, 0, (i + 1));
 	if (!temp[i + 1])
-		free_ptr(str, NULL);
+		ft_free_ptr(str, NULL);
 	else
 	{
 		(*str) = ft_strdup(&temp[i + 1]);
@@ -53,9 +53,9 @@ char	*check_backup(char **backup, char **buffer)
 	char	*line;
 
 	if (!(*backup)[0])
-		return (free_ptr(backup, buffer));
+		return (ft_free_ptr(backup, buffer));
 	line = ft_strdup(*backup);
-	free_ptr(backup, buffer);
+	ft_free_ptr(backup, buffer);
 	return (line);
 }
 
@@ -89,7 +89,7 @@ char	*read_file(int fd, char **backup)
 			return (NULL);
 		n_let = read(fd, buffer, BUFFER_SIZE);
 		if (n_let == -1)
-			return (free_ptr(backup, &buffer));
+			return (ft_free_ptr(backup, &buffer));
 		if (n_let == 0)
 			return (check_backup(backup, &buffer));
 		buffer[n_let] = '\0';

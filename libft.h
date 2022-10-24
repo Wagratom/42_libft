@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 09:56:46 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:28:28 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,7 +256,7 @@ int		ft_toupper(int c);
 //*************************************************************
 
 //Give free in the pointers passed as a parameter
-char	*free_ptr(char **bloco1, char **bloco2);
+char	*ft_free_ptr(char **bloco1, char **bloco2);
 
 //read a file line by line
 char	*get_next_line(int fd);
