@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 15:56:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/01 17:17:10 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 10:38:42 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ t_bool	ft_is_int_nbr(char *nbr)
 	char	*nbr_conv;
 	int		status;
 
-	status = TRUE;
 	nbr_conv = convert_number(&nbr);
-	if (ft_str_eq(nbr_conv, nbr) == FALSE)
-		status = FALSE;
+	status = ft_str_eq(nbr_conv, nbr);
 	free(nbr_conv);
 	return (status);
 }
