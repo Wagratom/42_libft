@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:05 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 17:50:53 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:17:55 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	sub_str = alloc_substr(s, start, len + 1);
-	if (sub_str == NULL)
-		return (NULL);
 	ft_strlcpy(sub_str, &s[start], len + 1);
 	return (sub_str);
 }
