@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:36:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 19:02:03 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/11/04 14:27:17 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*find_chr(unsigned char *src, unsigned char c, int end_str)
+char	*find_reverse_chr(unsigned char *src, unsigned char c, int end_str)
 {
 	while (src != NULL && end_str--)
 	{
@@ -28,6 +28,6 @@ char	*ft_strrchr(const char *str, int c)
 	size_t			len;
 
 	len = ft_strlen(str) + 1;
-	ptr = find_chr((unsigned char *)str, (unsigned char )c, len);
+	ptr = find_reverse_chr((unsigned char *)str, (unsigned char )c, len);
 	return (ptr);
 }
