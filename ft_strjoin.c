@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:30:40 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/06/05 14:44:46 by wwallas-         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:36:26 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*robustjoin(char **s1, char **s2)
+{
+	char	*result;
+
+	result = ft_strjoin(*s1, *s2);
+	ft_free_ptr(s1, s2);
+	return (result);
+}
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*tot_str;

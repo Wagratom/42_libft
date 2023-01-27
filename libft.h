@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 17:28:28 by wwallas-         ###   ########.fr       */
+/*   Updated: 2023/01/27 17:39:41 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,6 +194,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //string, which is the result of the concatenation
 //of ’s1’ and ’s2’.
 char	*ft_strjoin(char const *s1, char const *s2);
+
+//Same operation as ft_strjoin. Differences: receives an address
+//of two strings to be able to concatenate instead of the string
+//itself, give free addresses after concatenating both.
+char	*robustjoin(char **s1, char **s2);
 
 //A strlcat () anexa a string src ao final de dst.
 //Ele anexará no máximo tamanho - strlen(dst) - 1
