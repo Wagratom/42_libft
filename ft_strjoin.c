@@ -6,7 +6,7 @@
 /*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:30:40 by wwallas-          #+#    #+#             */
-/*   Updated: 2023/01/27 17:36:26 by wwalas-          ###   ########.fr       */
+/*   Updated: 2023/01/31 11:58:09 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*robustjoin(char **s1, char **s2)
 	ft_free_ptr(s1, s2);
 	return (result);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*tot_str;
