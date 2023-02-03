@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_len.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:33:02 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 17:32:54 by wwallas-         ###   ########.fr       */
+/*   Updated: 2023/02/03 13:54:21 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int	ft_array_len(char	**array)
 {
-	int		len;
+	int	len;
 
-	len = -1;
-	while (array != NULL && array[++len])
-		;
+	len = 0;
+	if (array == NULL)
+		return (-1);
+	while (array[len])
+		len++;
 	return (len);
 }
