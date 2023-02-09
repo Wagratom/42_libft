@@ -6,13 +6,13 @@
 /*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:30:40 by wwallas-          #+#    #+#             */
-/*   Updated: 2023/01/31 11:58:09 by wwalas-          ###   ########.fr       */
+/*   Updated: 2023/02/09 17:39:12 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*robustjoin(char **s1, char **s2)
+char	*ft_robustjoin(char **s1, char **s2)
 {
 	char	*result;
 

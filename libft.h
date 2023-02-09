@@ -6,7 +6,7 @@
 /*   By: wwalas- <wwallas-@student.42sp.org.br>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:49:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2023/01/27 17:39:41 by wwalas-          ###   ########.fr       */
+/*   Updated: 2023/02/09 17:39:23 by wwalas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,7 +198,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 //Same operation as ft_strjoin. Differences: receives an address
 //of two strings to be able to concatenate instead of the string
 //itself, give free addresses after concatenating both.
-char	*robustjoin(char **s1, char **s2);
+char	*ft_robustjoin(char **s1, char **s2);
 
 //A strlcat () anexa a string src ao final de dst.
 //Ele anexará no máximo tamanho - strlen(dst) - 1
